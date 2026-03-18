@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Canyon</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #fdf6ee;
+      color: #2c1810;
+    }
+    h1 {
+      font-size: 2.5rem;
+      border-bottom: 3px solid #c0622a;
+      padding-bottom: 0.5rem;
+      color: #8b3a1a;
+    }
+    h2 {
+      color: #8b3a1a;
+      margin-top: 2rem;
+    }
+    .hero {
+      background: linear-gradient(135deg, #c0622a, #8b3a1a);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .layers {
+      display: grid;
+      gap: 0.75rem;
+      margin: 1rem 0;
+    }
+    .layer {
+      padding: 0.75rem 1rem;
+      border-left: 5px solid;
+      border-radius: 0 4px 4px 0;
+    }
+    .layer-kaibab    { background: #e8e0d0; border-color: #a0907a; }
+    .layer-coconino  { background: #f5ecd0; border-color: #d4b070; }
+    .layer-hermit    { background: #f0cfc0; border-color: #c04040; }
+    .layer-supai     { background: #e8b090; border-color: #b05030; }
+    .layer-redwall   { background: #e09080; border-color: #a03020; }
+    .layer-muav      { background: #c0d0c0; border-color: #608060; }
+    .layer-bright    { background: #c0c8e0; border-color: #4060a0; }
+    .layer-vishnu    { background: #705060; border-color: #402030; color: #f0e0e8; }
+    .layer strong { display: inline-block; min-width: 160px; }
+    .links {
+      list-style: none;
+      padding: 0;
+    }
+    .links li {
+      margin: 0.6rem 0;
+    }
+    .links a {
+      color: #c0622a;
+      text-decoration: none;
+      font-size: 1.05rem;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .photo-grid figure {
+      margin: 0;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+    .photo-grid figcaption {
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 0.3rem;
+      font-style: italic;
+    }
+    .map-container {
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 380px;
+      border: none;
+      display: block;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #888;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>The Grand Canyon</h1>
+
+  <div class="photo-grid">
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg/1280px-Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg" alt="Dawn on the South Rim of the Grand Canyon">
+      <figcaption>Dawn on the South Rim &mdash; CC BY 2.0 US National Park Service</figcaption>
+    </figure>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/USA_09847_Grand_Canyon_Luca_Galuzzi_2007.jpg/1280px-USA_09847_Grand_Canyon_Luca_Galuzzi_2007.jpg" alt="Grand Canyon panorama">
+      <figcaption>Grand Canyon panorama &mdash; CC BY-SA 2.5 Luca Galuzzi</figcaption>
+    </figure>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Grand_Canyon_view_from_Pima_Point_2010.jpg/1280px-Grand_Canyon_view_from_Pima_Point_2010.jpg" alt="View from Pima Point">
+      <figcaption>View from Pima Point &mdash; CC BY-SA 3.0 Chensiyuan</figcaption>
+    </figure>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Colorado_River_01.jpg/1280px-Colorado_River_01.jpg" alt="Colorado River in the canyon">
+      <figcaption>The Colorado River below &mdash; Public Domain</figcaption>
+    </figure>
+  </div>
+
+  <div class="hero">
+    Carved by the Colorado River over millions of years, the Grand Canyon stretches
+    277 miles (446 km) through northwestern Arizona. It reaches depths of over a mile
+    (1,600 m) and widths of up to 18 miles (29 km), exposing one of the most complete
+    geological records on Earth.
+  </div>
+
+  <h2>Geology</h2>
+  <p>
+    The canyon's walls reveal nearly two billion years of Earth's history, laid bare
+    by the relentless erosion of the Colorado River beginning around 5–6 million years
+    ago. The rock layers — called strata — are read from top to bottom like pages of a
+    book, with the youngest rocks at the rim and the oldest deep in the inner gorge.
+  </p>
+  <p>
+    The forces that shaped the canyon include river erosion, freeze-thaw weathering,
+    wind, and the gradual uplift of the Colorado Plateau, which raised the land and
+    steepened the river's gradient, accelerating the cutting process.
+  </p>
+
+  <h2>Major Rock Layers</h2>
+  <div class="layers">
+    <div class="layer layer-kaibab">
+      <strong>Kaibab Limestone</strong> ~270 million years — marine fossils, forms the rim
+    </div>
+    <div class="layer layer-coconino">
+      <strong>Coconino Sandstone</strong> ~275 million years — ancient desert dunes
+    </div>
+    <div class="layer layer-hermit">
+      <strong>Hermit Formation</strong> ~280 million years — red shale, fern fossils
+    </div>
+    <div class="layer layer-supai">
+      <strong>Supai Group</strong> ~285–315 million years — red sandstone &amp; shale
+    </div>
+    <div class="layer layer-redwall">
+      <strong>Redwall Limestone</strong> ~340 million years — cliffs stained red by iron
+    </div>
+    <div class="layer layer-muav">
+      <strong>Muav Limestone</strong> ~505 million years — early Cambrian seas
+    </div>
+    <div class="layer layer-bright">
+      <strong>Bright Angel Shale</strong> ~515 million years — trilobite fossils
+    </div>
+    <div class="layer layer-vishnu">
+      <strong>Vishnu Basement Rocks</strong> ~1.7–1.8 billion years — metamorphic core
+    </div>
+  </div>
+
+  <h2>Location</h2>
+  <div class="map-container">
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-113.3%2C35.9%2C-111.6%2C36.5&layer=mapnik&marker=36.1069%2C-112.1129"
+      title="Grand Canyon location map"
+      loading="lazy">
+    </iframe>
+  </div>
+  <p style="font-size:0.85rem; color:#888; margin-top:-0.5rem;">
+    Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" style="color:#c0622a;">OpenStreetMap contributors</a>
+  </p>
+
+  <h2>Learn More</h2>
+  <ul class="links">
+    <li><a href="https://www.nps.gov/grca/index.htm" target="_blank">National Park Service — Grand Canyon</a></li>
+    <li><a href="https://www.nps.gov/grca/learn/nature/geologicformations.htm" target="_blank">NPS: Geologic Formations of the Grand Canyon</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Geology_of_the_Grand_Canyon_area" target="_blank">Wikipedia: Geology of the Grand Canyon Area</a></li>
+    <li><a href="https://grandcanyontrust.org/" target="_blank">Grand Canyon Trust — Conservation &amp; Science</a></li>
+    <li><a href="https://www.usgs.gov/centers/southwest-biological-science-center/grand-canyon" target="_blank">USGS Grand Canyon Research</a></li>
+  </ul>
+
+  <footer>
+    Grand Canyon National Park, Arizona &mdash; Established February 26, 1919
+  </footer>
+
+</body>
+</html>
