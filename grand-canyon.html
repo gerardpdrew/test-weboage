@@ -3,115 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grand Canyon</title>
+  <title>Grand Canyon | Geological Wonder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --copper: #c0622a;
+      --terracotta: #8b3a1a;
+      --sandstone: #fdf6ee;
+      --charcoal: #2c1810;
+      --slate: #546e7a;
+    }
     body {
-      font-family: Georgia, serif;
-      max-width: 800px;
+      font-family: 'Crimson Pro', Georgia, serif;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 2rem;
-      background: #fdf6ee;
-      color: #2c1810;
-    }
-    h1 {
-      font-size: 2.5rem;
-      border-bottom: 3px solid #c0622a;
-      padding-bottom: 0.5rem;
-      color: #8b3a1a;
-    }
-    h2 {
-      color: #8b3a1a;
-      margin-top: 2rem;
-    }
-    .hero {
-      background: linear-gradient(135deg, #c0622a, #8b3a1a);
-      color: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
+      padding: 0;
+      background: var(--sandstone);
+      color: var(--charcoal);
       line-height: 1.6;
     }
-    .layers {
-      display: grid;
-      gap: 0.75rem;
-      margin: 1rem 0;
+    .container {
+      padding: 2rem;
     }
-    .layer {
-      padding: 0.75rem 1rem;
-      border-left: 5px solid;
-      border-radius: 0 4px 4px 0;
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--terracotta);
     }
-    .layer-kaibab    { background: #e8e0d0; border-color: #a0907a; }
-    .layer-coconino  { background: #f5ecd0; border-color: #d4b070; }
-    .layer-hermit    { background: #f0cfc0; border-color: #c04040; }
-    .layer-supai     { background: #e8b090; border-color: #b05030; }
-    .layer-redwall   { background: #e09080; border-color: #a03020; }
-    .layer-muav      { background: #c0d0c0; border-color: #608060; }
-    .layer-bright    { background: #c0c8e0; border-color: #4060a0; }
-    .layer-vishnu    { background: #705060; border-color: #402030; color: #f0e0e8; }
-    .layer strong { display: inline-block; min-width: 160px; }
-    .links {
-      list-style: none;
-      padding: 0;
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      padding: 3rem 2rem;
+      background: var(--terracotta);
+      color: white;
+      text-align: center;
+      border-bottom: 5px solid var(--copper);
     }
-    .links li {
-      margin: 0.6rem 0;
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--copper);
+      padding-bottom: 0.3rem;
+      margin-top: 3rem;
     }
-    .links a {
-      color: #c0622a;
-      text-decoration: none;
-      font-size: 1.05rem;
-    }
-    .links a:hover {
-      text-decoration: underline;
+    .hero {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-left: 6px solid var(--copper);
     }
     .photo-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin: 1.5rem 0;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
     }
     .photo-grid figure {
       margin: 0;
+      transition: transform 0.3s ease;
+    }
+    .photo-grid figure:hover {
+      transform: translateY(-5px);
     }
     .photo-grid img {
       width: 100%;
-      height: 220px;
+      height: 250px;
       object-fit: cover;
-      border-radius: 6px;
+      border-radius: 8px;
       display: block;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .photo-grid figcaption {
-      font-size: 0.8rem;
-      color: #888;
-      margin-top: 0.3rem;
+      font-size: 0.85rem;
+      color: var(--slate);
+      margin-top: 0.5rem;
       font-style: italic;
+      text-align: right;
     }
-    .map-container {
-      margin: 1.5rem 0;
-      border-radius: 8px;
+    .layers {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin: 2rem 0;
+      background: #ddd;
+      padding: 2px;
+      border-radius: 6px;
       overflow: hidden;
-      border: 1px solid #ddd;
+    }
+    .layer {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .layer strong { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; }
+    .layer span { font-size: 0.85rem; opacity: 0.8; }
+    .layer-kaibab    { background: #e8e0d0; }
+    .layer-coconino  { background: #f5ecd0; }
+    .layer-hermit    { background: #f0cfc0; }
+    .layer-supai     { background: #e8b090; }
+    .layer-redwall   { background: #e09080; }
+    .layer-muav      { background: #c0d0c0; }
+    .layer-bright    { background: #c0c8e0; }
+    .layer-vishnu    { background: #705060; color: white; }
+    
+    .map-container {
+      margin: 2rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     .map-container iframe {
       width: 100%;
-      height: 380px;
+      height: 450px;
       border: none;
       display: block;
     }
+    .links {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .links li a {
+      display: block;
+      padding: 1rem;
+      background: white;
+      color: var(--copper);
+      text-decoration: none;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      transition: all 0.2s ease;
+      font-weight: bold;
+    }
+    .links li a:hover {
+      background: var(--copper);
+      color: white;
+      transform: translateX(5px);
+    }
     footer {
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      color: #888;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
+      margin-top: 4rem;
+      padding: 2rem;
+      background: var(--charcoal);
+      color: #aaa;
+      text-align: center;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
   <h1>The Grand Canyon</h1>
+
+  <div class="container">
 
   <div class="photo-grid">
     <figure>
@@ -152,31 +202,31 @@
     steepened the river's gradient, accelerating the cutting process.
   </p>
 
-  <h2>Major Rock Layers</h2>
+  <h2>Major Rock Layers (Strata)</h2>
   <div class="layers">
     <div class="layer layer-kaibab">
-      <strong>Kaibab Limestone</strong> ~270 million years — marine fossils, forms the rim
+      <strong>Kaibab Limestone</strong> <span>~270 million years &bull; Marine Fossils</span>
     </div>
     <div class="layer layer-coconino">
-      <strong>Coconino Sandstone</strong> ~275 million years — ancient desert dunes
+      <strong>Coconino Sandstone</strong> <span>~275 million years &bull; Ancient Desert Dunes</span>
     </div>
     <div class="layer layer-hermit">
-      <strong>Hermit Formation</strong> ~280 million years — red shale, fern fossils
+      <strong>Hermit Formation</strong> <span>~280 million years &bull; Red Shale &amp; Ferns</span>
     </div>
     <div class="layer layer-supai">
-      <strong>Supai Group</strong> ~285–315 million years — red sandstone &amp; shale
+      <strong>Supai Group</strong> <span>~285–315 million years &bull; Red Sandstone</span>
     </div>
     <div class="layer layer-redwall">
-      <strong>Redwall Limestone</strong> ~340 million years — cliffs stained red by iron
+      <strong>Redwall Limestone</strong> <span>~340 million years &bull; Iconic Cliffs</span>
     </div>
     <div class="layer layer-muav">
-      <strong>Muav Limestone</strong> ~505 million years — early Cambrian seas
+      <strong>Muav Limestone</strong> <span>~505 million years &bull; Cambrian Seas</span>
     </div>
     <div class="layer layer-bright">
-      <strong>Bright Angel Shale</strong> ~515 million years — trilobite fossils
+      <strong>Bright Angel Shale</strong> <span>~515 million years &bull; Trilobites</span>
     </div>
     <div class="layer layer-vishnu">
-      <strong>Vishnu Basement Rocks</strong> ~1.7–1.8 billion years — metamorphic core
+      <strong>Vishnu Basement Rocks</strong> <span>~1.7–1.8 billion years &bull; Metamorphic Core</span>
     </div>
   </div>
 
@@ -188,21 +238,23 @@
       loading="lazy">
     </iframe>
   </div>
-  <p style="font-size:0.85rem; color:#888; margin-top:-0.5rem;">
-    Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" style="color:#c0622a;">OpenStreetMap contributors</a>
+  <p style="font-size:0.85rem; color:#888; margin-top:-0.5rem; text-align: center;">
+    Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" style="color:var(--copper);">OpenStreetMap contributors</a>
   </p>
 
   <h2>Learn More</h2>
   <ul class="links">
-    <li><a href="https://www.nps.gov/grca/index.htm" target="_blank">National Park Service — Grand Canyon</a></li>
-    <li><a href="https://www.nps.gov/grca/learn/nature/geologicformations.htm" target="_blank">NPS: Geologic Formations of the Grand Canyon</a></li>
-    <li><a href="https://en.wikipedia.org/wiki/Geology_of_the_Grand_Canyon_area" target="_blank">Wikipedia: Geology of the Grand Canyon Area</a></li>
-    <li><a href="https://grandcanyontrust.org/" target="_blank">Grand Canyon Trust — Conservation &amp; Science</a></li>
-    <li><a href="https://www.usgs.gov/centers/southwest-biological-science-center/grand-canyon" target="_blank">USGS Grand Canyon Research</a></li>
+    <li><a href="https://www.nps.gov/grca/index.htm" target="_blank">National Park Service</a></li>
+    <li><a href="https://www.nps.gov/grca/learn/nature/geologicformations.htm" target="_blank">Geologic Formations</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Geology_of_the_Grand_Canyon_area" target="_blank">Wikipedia Geology</a></li>
+    <li><a href="https://grandcanyontrust.org/" target="_blank">Grand Canyon Trust</a></li>
   </ul>
 
+  </div> <!-- End .container -->
+
   <footer>
-    Grand Canyon National Park, Arizona &mdash; Established February 26, 1919
+    Grand Canyon National Park, Arizona &bull; Established February 26, 1919<br>
+    <small>One of the Seven Natural Wonders of the World</small>
   </footer>
 
 </body>
